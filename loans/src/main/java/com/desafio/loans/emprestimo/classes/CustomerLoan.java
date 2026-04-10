@@ -1,4 +1,4 @@
-package com.desafio.loans.emprestimo;
+package com.desafio.loans.emprestimo.classes;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
@@ -6,8 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.validator.constraints.br.CPF;
-
-import java.math.BigDecimal;
 
 @Getter
 @Setter

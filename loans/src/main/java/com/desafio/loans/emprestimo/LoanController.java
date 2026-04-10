@@ -1,5 +1,6 @@
 package com.desafio.loans.emprestimo;
 
+import com.desafio.loans.emprestimo.classes.CustomerLoan;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,6 +19,6 @@ public class LoanController {
 
     @PostMapping
     public ResponseEntity<?> postLoan(@RequestBody @Valid CustomerLoan loan){
-        return
+        return Service.validateLoans(loan);
     }
 }
