@@ -4,6 +4,7 @@ import com.desafio.loans.emprestimo.classes.CustomerLoan;
 import com.desafio.loans.emprestimo.classes.Response;
 import com.desafio.loans.emprestimo.classes.loan.Loan;
 import com.desafio.loans.emprestimo.classes.loan.LoanCONSIGNMENT;
+import com.desafio.loans.emprestimo.classes.loan.LoanGUARANTEED;
 import com.desafio.loans.emprestimo.classes.loan.LoanPERSONAL;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,16 +29,16 @@ public class LoanService {
             loansList.add(new LoanPERSONAL());
         }
 
-        //Emprestimo Garantia
+        //Emprestimo Consignado
         if(income >= 5000){
             loansList.add(new LoanCONSIGNMENT());
         }
 
-        //Emprestimo Consignado
+        //Emprestimo Garantia
         if(income <= 3000){
-            loansList.add(new LoanCONSIGNMENT());
-        } else if( income > 3000 && income < 5000 && age < 30 && local.equals("SP") ){
-
+            loansList.add(new LoanGUARANTEED());
+        } else if( income > 3000 && income < 5000 && age < 30 && local.equals("SP")     ){
+            loansList.add(new LoanGUARANTEED());
         }
 
 
