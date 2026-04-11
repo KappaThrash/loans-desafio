@@ -1,4 +1,4 @@
-package com.desafio.loans.emprestimo;
+package com.desafio.loans.emprestimo.loan;
 
 import com.desafio.loans.emprestimo.classes.CustomerLoan;
 import jakarta.validation.Valid;
